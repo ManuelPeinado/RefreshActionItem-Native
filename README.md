@@ -3,7 +3,7 @@ RefreshActionItem
 
 A fork of [RefreshActionItem][1] that works with the native action bar instead of with ActionBarSherlock. Use it if your app does not need to maintain Android  2.X compatibility.
 
-To use, follow the instructions here, with the only change that your Maven dependency should be:
+To add to your application, follow the instructions [here][1], with the only difference that your Maven dependency should be:
 
 
 ```xml
