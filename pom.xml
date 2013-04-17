@@ -12,11 +12,11 @@
     <groupId>com.github.manuelpeinado.refreshactionitem-native</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <name>Android-RefreshActionItem (Parent)</name>
     <description>Action bar item which acts both as refresh button and progress indicator</description>
-    <url>https://github.com/ManuelPeinado/RefreshActionItem</url>
+    <url>https://github.com/ManuelPeinado/RefreshActionItem-Native</url>
     <inceptionYear>2013</inceptionYear>
 
     <modules>
@@ -25,9 +25,9 @@
     </modules>
 
     <scm>
-        <url>http://github.com/ManuelPeinado/RefreshActionItem/</url>
-        <connection>scm:git:git://github.com/ManuelPeinado/RefreshActionItem.git</connection>
-        <developerConnection>scm:git:git@github.com:ManuelPeinado/RefreshActionItem.git</developerConnection>
+        <url>http://github.com/ManuelPeinado/RefreshActionItem-Native/</url>
+        <connection>scm:git:git://github.com/ManuelPeinado/RefreshActionItem-Native.git</connection>
+        <developerConnection>scm:git:git@github.com:ManuelPeinado/RefreshActionItem-Native.git</developerConnection>
     </scm>
 
     <developers>
@@ -58,7 +58,7 @@
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/ManuelPeinado/RefreshActionItem/issues</url>
+        <url>https://github.com/ManuelPeinado/RefreshActionItem-Native/issues</url>
     </issueManagement>
 
     <properties>
