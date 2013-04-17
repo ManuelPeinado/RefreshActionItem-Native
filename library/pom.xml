@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.github.manuelpeinado.refreshactionitem-native</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     
@@ -26,12 +26,6 @@
             <artifactId>support-v4</artifactId>
         </dependency>
         
-        <dependency>
-          <groupId>com.actionbarsherlock</groupId>
-          <artifactId>actionbarsherlock</artifactId>
-          <version>4.2.0</version>
-          <type>apklib</type>
-        </dependency>
     </dependencies>
 
     <build>
