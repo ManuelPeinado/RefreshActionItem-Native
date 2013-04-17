@@ -15,7 +15,7 @@ To add to your application, follow the instructions [here][1], with the only dif
  </dependency>
 ```
 
-If you don't use Maven, simply skip the step in which you add ActionBarSherlock to your library project in Eclipse.
+If you don't use Maven, just skip the step in which you add ActionBarSherlock to your library project in Eclipse.
 
 
 Libraries used
