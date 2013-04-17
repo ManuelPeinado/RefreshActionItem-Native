@@ -23,6 +23,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
@@ -31,7 +32,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.actionbarsherlock.view.MenuItem;
 import com.readystatesoftware.viewbadger.BadgeView;
 
 /**

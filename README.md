@@ -1,147 +1,32 @@
 RefreshActionItem
 =================
 
-An action bar item that implements this common pattern:
+A fork of [RefreshActionItem][1] that works with the native action bar instead of with ActionBarSherlock. Use it if your app does not need to maintain Android  2.X compatibility.
 
-* Initially it shows a refresh button.
-* If the button is clicked, a background operation begins and the button turns into a progress indicator.
-* When the background operation ends, the button is restored to its initial state.
+To use, follow the instructions here, with the only change that your Maven dependency should be:
 
-The progress bar shows a magnitude which represents how far the operation has proceeded. The progress bar can also be made indeterminate, just like the built-in <tt>ProgressBar</tt>.
- 
-It is possible to add a small badge to the action item. This tells the user that there is new data available.
-
-This library requires [ActionBarSherlock][1], and is thus compatible with Android 2.x and newer.
-
-![Example Image][2]
-
-Try out the sample application:
-
-<a href="https://play.google.com/store/apps/details?id=com.manuelpeinado.refreshactionitem.demo">
-  <img alt="Android app on Google Play"
-       src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
-</a>
-
-Or browse the [source code][3] of the sample application for a complete example of use.
-
-
-Including in your project
--------------------------
-
-If you’re using Eclipse with the ADT plugin you can include RefreshActionItem as a library project. Create a new Android project in Eclipse using the library/ folder as the existing source. Then, open the properties of this new project and, in the 'Android' category, add a reference to the ActionBarSherlock library project. Finally, in your application project properties, add a reference to the created library project.
-
-If you use maven to build your Android project you can simply add a dependency for this library.
 
 ```xml
  <dependency>
-     <groupId>com.github.manuelpeinado.refreshactionitem</groupId>
-     <artifactId>library</artifactId>
+     <groupId>com.github.manuelpeinado.refreshactionitem-native</groupId>
+     <artifactId>RefreshActionItem</artifactId>
      <version>1.0.0</version>
      <type>apklib</type>
  </dependency>
 ```
 
-Usage
------
+If you don't use Maven, simply skip the step in which you add ActionBarSherlock to your library project in Eclipse.
 
-Add an element for the refresh action to your XML menu:
-
-```xml
-<item
-    android:id="@+id/refresh_button"          
-    android:actionViewClass=
-        "com.manuelpeinado.refreshactionitem.RefreshActionItem"
-    android:showAsAction="always"
-    android:title="@string/action_refresh"/>
-```
-
-Then, configure the action in the <tt>onCreateOptionsMenu</tt> method of your <tt>SherlockActivity</tt>-derived activity:
-
-```java
-@Override public boolean onCreateOptionsMenu(Menu menu) {
-    getSupportMenuInflater().inflate(R.menu.main, menu);
-    MenuItem item = menu.findItem(R.id.refresh_button);
-    mRefreshActionItem = (RefreshActionItem) item.getActionView();
-    mRefreshActionItem.setMenuItem(item);
-    mRefreshActionItem.setMax(100);
-    mRefreshActionItem.setRefreshActionListener(this);
-    return true;
-}
-```
-
-The <tt>setRefreshActionListener</tt> method registers a callback that will be invoked when the refresh button is clicked. Start your background process from this callback and invoke <tt>showProgress(true)</tt> on the action item so that it turns into a progress indicator:
-
-```java
-@Override
-public void onRefreshButtonClick(RefreshActionItem sender) {
-    mRefreshActionItem.showProgress(true);
-    startBackgroundTask();
-}
-```
-
-From your background task, call the action item's <tt>setProgress(int)</tt> method each time some progress is made:
-
-```java
-mRefreshActionItem.setProgress(progress);
-```
-    
-Finally, when the background task is complete restore the action item to its original state:
-
-```java
-mRefreshActionItem.showProgress(false);
-```
-
-### Progress indicator types
-
-By default the action item shows the amount of progress using a wheel. There is an additional style, "pie", which you can activate by calling <tt>setProgressIndicatorType(ProgressIndicatorType.PIE)</tt> on your action item.
-
-Also, if the progress of your background task cannot be easily measured you might prefer to use an indeterminate progress indicator. To achieve this just pass <tt>ProgressIndicatorType.INDETERMINATE</tt> to <tt>setProgressIndicatorType()</tt>.
-
-### Badges
-
-Sometimes it is useful to give the user a visual hint suggesting that there is new data to be loaded. You can easily achieve this by adding a badge to your action item:
-
-```java
-mRefreshActionItem.showBadge();
-```
-
-The badge shows an exclamation mark by default, but you can specify an alternative text if you desire.
-
-
-Customization
----------------------
-You can easily customize the appearance of your RefreshActionItems. Just define a <tt>refreshActionItemStyle</tt> attribute in your theme and make it reference a custom style where you specify new values for any of the multiple attributes recognized by the library.
-
-The following snippet is extracted from the accompanying sample application. To see it in action open the "Styling" demo in the main menu.
-
-```xml
-<style name="AppTheme" parent="Theme.Sherlock.Light">
-    <item name="refreshActionItemStyle">@style/CustomRefreshActionItem</item>
-</style>
-
-<style name="CustomRefreshActionItem" parent="Widget.RefreshActionItem.Light">
-    <item name="progressIndicatorType">pie</item>
-    <item name="badgeBackgroundColor">#A4F4</item>
-    <item name="badgeTextStyle">@style/BadgeText</item>
-    <item name="badgePosition">bottomLeft</item>
-</style>
-
-<style name="BadgeText">
-    <item name="android:textSize">14dp</item>
-    <item name="android:textColor">#7000</item>
-</style>
-```
 
 Libraries used
 --------------------
 
-* [ActionBarSherlock][1] by Jake Wharton.
-* [android-viewbadger][5] by Jeff Gilfelt.
+* [android-viewbadger][2] by Jeff Gilfelt.
 
 Credits
 -------
 
-* Cake launcher icon by [IconEden][6].
+* Cake launcher icon by [IconEden][3].
 
 Developed By
 --------------------
@@ -180,9 +65,6 @@ License
 
 
 
- [1]: http://actionbarsherlock.com
- [2]: https://raw.github.com/ManuelPeinado/RefreshActionItem/master/art/readme_pic.png
- [3]: https://github.com/ManuelPeinado/RefreshActionItem/tree/master/sample
- [4]: https://github.com/TimotheeJeannin/ProviGen
- [5]: https://github.com/jgilfelt/android-viewbadger
- [6]: http://www.iconeden.com
+ [1]: https://github.com/ManuelPeinado/RefreshActionItem
+ [2]: https://github.com/jgilfelt/android-viewbadger
+ [3]: http://www.iconeden.com

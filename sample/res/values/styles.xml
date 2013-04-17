@@ -13,9 +13,8 @@
         <item name="android:textColor">#7000</item>
     </style>
 
-    <style name="Widget.ActionBar.Styled" parent="Widget.Sherlock.Light.ActionBar.Solid">
+    <style name="Widget.ActionBar.Styled" parent="android:style/Widget.Holo.Light.ActionBar.Solid">
         <item name="android:background">#eec</item>
-        <item name="background">#eec</item>
     </style>
 
 </resources>

@@ -17,18 +17,18 @@ package com.manuelpeinado.refreshactionitem.demo;
 
 import java.util.Random;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 
-import com.actionbarsherlock.app.SherlockListActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
 import com.manuelpeinado.refreshactionitem.ProgressIndicatorType;
 import com.manuelpeinado.refreshactionitem.RefreshActionItem;
 import com.manuelpeinado.refreshactionitem.RefreshActionItem.RefreshActionListener;
 
-public class IndeterminateProgressActivity extends SherlockListActivity implements RefreshActionListener {
+public class IndeterminateProgressActivity extends ListActivity implements RefreshActionListener {
     private RefreshActionItem mRefreshActionItem;
     private Random r = new Random();
 
@@ -36,12 +36,12 @@ public class IndeterminateProgressActivity extends SherlockListActivity implemen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indeterminate_progress);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.refresh, menu);
+        getMenuInflater().inflate(R.menu.refresh, menu);
         MenuItem item = menu.findItem(R.id.refresh_button);
         mRefreshActionItem = (RefreshActionItem)item.getActionView();
         mRefreshActionItem.setMenuItem(item);
