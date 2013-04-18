@@ -1,5 +1,5 @@
-RefreshActionItem (Native action bar)
-=================
+RefreshActionItem (native action bar)
+=====================================
 
 A fork of [RefreshActionItem][1] that works with the native action bar instead of with ActionBarSherlock. Use it if your app does not need to maintain Android  2.X compatibility.
 
