@@ -28,8 +28,14 @@ Credits
 
 * Cake launcher icon by [IconEden][3].
 
+Who's using it
+--------------
+ 
+*Does your app use RefreshActionItem-Native? If you want to be featured on this list drop me a line.*
+
+
 Developed By
---------------------
+------------
 
 Manuel Peinado Gallego - <manuel.peinado@gmail.com>
 
