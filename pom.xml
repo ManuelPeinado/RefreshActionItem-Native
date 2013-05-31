@@ -12,7 +12,7 @@
     <groupId>com.github.manuelpeinado.refreshactionitem-native</groupId>
     <artifactId>RefreshActionItemNative-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <name>Android-RefreshActionItem-Native (Parent)</name>
     <description>Action bar item which acts both as refresh button and progress indicator</description>
@@ -70,7 +70,7 @@
         <android.platform>16</android.platform>
         <android.support.version>r7</android.support.version>
 
-        <android-maven.version>3.3.0</android-maven.version>
+        <android-maven.version>3.3.2</android-maven.version>
     </properties>
 
     <dependencyManagement>

@@ -38,7 +38,7 @@ public class BadgeActivity extends ListActivity implements RefreshActionListener
         setContentView(R.layout.activity_badge);
         getActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.refresh, menu);
@@ -69,7 +69,8 @@ public class BadgeActivity extends ListActivity implements RefreshActionListener
                     public void run() {
                         mRefreshActionItem.showProgress(false);
                         String[] items = generateRandomItemList();
-                        setListAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, android.R.id.text1, items));
+                        setListAdapter(new ArrayAdapter<String>(getApplicationContext(),
+                                android.R.layout.simple_list_item_1, android.R.id.text1, items));
                     }
                 });
             }
@@ -84,7 +85,7 @@ public class BadgeActivity extends ListActivity implements RefreshActionListener
         }
         return result;
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -96,7 +97,7 @@ public class BadgeActivity extends ListActivity implements RefreshActionListener
         }
         return false;
     }
-    
+
     @Override
     public void onRefreshButtonClick(RefreshActionItem sender) {
         loadData();

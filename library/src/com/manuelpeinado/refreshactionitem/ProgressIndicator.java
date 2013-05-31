@@ -65,7 +65,7 @@ class ProgressIndicator extends View {
         super(context, attrs);
         Resources r = context.getResources();
         float scale = r.getDisplayMetrics().density;
-        mPadding = scale * PADDING;
+        mPadding = scale * PADDING + r.getDimension(R.dimen.rai__action_bar_icon_vertical_padding);
         mPaintForeground.setColor(mColorForeground);
         mPaintForeground.setAntiAlias(true);
         mPaintBackground.setColor(mColorBackground);

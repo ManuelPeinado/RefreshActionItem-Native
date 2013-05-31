@@ -4,11 +4,11 @@
     android:layout_height="@dimen/rai__action_bar_default_height" >
 
     <ImageView
-        android:scaleType="center"
         android:id="@+id/refresh_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/rai__action_bar_icon_vertical_padding" />
+        android:padding="@dimen/rai__action_bar_icon_vertical_padding"
+        android:scaleType="center" />
 
     <ProgressBar
         android:id="@+id/indeterminate_progress_indicator"
@@ -20,7 +20,6 @@
     <com.manuelpeinado.refreshactionitem.ProgressIndicator
         android:id="@+id/determinate_progress_indicator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/rai__action_bar_icon_vertical_padding" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>
