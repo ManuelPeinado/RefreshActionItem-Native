@@ -10,7 +10,7 @@ To add to your application, follow the instructions [here][1], with the only dif
  <dependency>
      <groupId>com.github.manuelpeinado.refreshactionitem-native</groupId>
      <artifactId>RefreshActionItem</artifactId>
-     <version>1.0.0</version>
+     <version>1.0.3</version>
      <type>apklib</type>
  </dependency>
 ```
