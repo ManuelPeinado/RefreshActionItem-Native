@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.github.manuelpeinado.refreshactionitem-native</groupId>
         <artifactId>RefreshActionItemNative-parent</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>1.0.3</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     
